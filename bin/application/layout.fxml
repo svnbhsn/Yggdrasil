@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <TextArea fx:id="taHistory" editable="false" layoutX="14.0" layoutY="28.0" prefHeight="86.0" prefWidth="227.0">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font></TextArea>
+      <AnchorPane layoutX="14.0" layoutY="125.0" prefHeight="208.0" prefWidth="227.0" style="-fx-border-color: #000000;">
+         <children>
+            <Button id="bSuchen" fx:id="bSearch" layoutX="18.0" layoutY="77.0" mnemonicParsing="false" onAction="#searchNode" prefHeight="34.0" prefWidth="193.0" text="Suchen" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button id="bEinfuegen" fx:id="bInsert" layoutX="18.0" layoutY="117.0" mnemonicParsing="false" onAction="#addNode" prefHeight="34.0" prefWidth="193.0" text="Einfügen">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button id="bEntfernen" fx:id="bDelete" layoutX="17.0" layoutY="160.0" mnemonicParsing="false" onAction="#removeNode" prefHeight="34.0" prefWidth="193.0" text="Entfernen">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField id="tfEingabe" fx:id="tfInput" alignment="CENTER" layoutX="18.0" layoutY="32.0" prefHeight="34.0" prefWidth="193.0" promptText="Schlüsselwert" />
+            <Text fontSmoothingType="LCD" layoutX="76.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operatioen">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apDraw" layoutX="251.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="940.0" style="-fx-border-color: #000000;" />
+      <AnchorPane layoutX="14.0" layoutY="342.0" prefHeight="153.0" prefWidth="227.0" style="-fx-border-color: #000000;">
+         <children>
+            <Button id="bPre" fx:id="bPreorder" layoutX="17.0" layoutY="29.0" mnemonicParsing="false" onAction="#preorder" prefHeight="34.0" prefWidth="193.0" text="Pre-Order" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text fontSmoothingType="LCD" layoutX="68.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Traversierung">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button id="bIn" fx:id="bInorder" layoutX="17.0" layoutY="68.0" mnemonicParsing="false" onAction="#inorder" prefHeight="34.0" prefWidth="193.0" text="In-Order" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button id="bPost" fx:id="bPostorder" layoutX="17.0" layoutY="106.0" mnemonicParsing="false" onAction="#postorder" prefHeight="34.0" prefWidth="193.0" text="Post-Order" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button id="bHoehe" fx:id="bTreeHigh" layoutX="31.0" layoutY="555.0" mnemonicParsing="false" onAction="#highTree" prefHeight="34.0" prefWidth="193.0" text="Höhe des Baumes" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button id="bLeeren" fx:id="bClearTree" layoutX="31.0" layoutY="659.0" mnemonicParsing="false" onAction="#clearTree" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #ff0000; -fx-text-fill: ffffff;" text="Baum leeren!" textAlignment="JUSTIFY" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text fx:id="tOutput" layoutX="251.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Text>
+      <Button id="bSpeichern" fx:id="bSaveAs" layoutX="31.0" layoutY="613.0" mnemonicParsing="false" onAction="#saveAsPicture" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #00d12a; -fx-text-fill: #ffffff;" text="Grafik speichern..." textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text fontSmoothingType="LCD" layoutX="102.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verlauf">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button id="bMin" fx:id="bMIn" layoutX="31.0" layoutY="511.0" mnemonicParsing="false" onAction="#MinValue" prefHeight="34.0" prefWidth="90.0" text="Minimum" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button id="bMax" fx:id="bMax" layoutX="134.0" layoutY="511.0" mnemonicParsing="false" onAction="#maxValue" prefHeight="34.0" prefWidth="90.0" text="Maximum" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
